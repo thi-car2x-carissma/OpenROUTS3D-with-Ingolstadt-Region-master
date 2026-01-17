@@ -1,6 +1,6 @@
 ### General Information
 
-**OpenROUTS3D** (**Open** **R**ealtime **O**SM- and **U**nity-based **T**raffic **S**imulator **3D**) - A multi-purpose driving simulator developed for the needs of Teleoperated Driving.
+**OpenROTUS3D** (**Open** **R**ealtime **O**SM- and **U**nity-based **T**raffic **S**imulator **3D**) - A multi-purpose driving simulator developed for the needs of Teleoperated Driving.
 
 ![OpenROUTS3D logo](logo.png)
 
@@ -57,14 +57,100 @@ Set axis and buttons of Controllers the correct way.
     
 For Logitech G29 steering wheels and pedals: Use the Setup in ps3 mode.
 
-### Hardware Requirements :
-Mouse and Keyboard as the primary control device.
-Steering Wheel and Pedals as a secondary control device,
-CPU must have a GPU in order to execute the tasks
+## Prerequisites
 
-### Software Requirements
-Unity 3D : Version (2019.4.0f1)
-Sumo : Version 1.5 (updated version may not work ideal with older map setup)
+Before starting, ensure you have the following installed:
+
+| Software | Version | Download Link |
+|----------|---------|---------------|
+| Unity Hub | Latest | [Download Unity Hub](https://unity.com/download) |
+| Unity Editor | 2019.4.0f1 (LTS) | Install via Unity Hub |
+| SUMO | 1.5 | [Download SUMO 1.5](https://sumo.dlr.de/docs/Downloads.php) |
+| Git | Latest | [Download Git](https://git-scm.com/downloads) |
+
+### System Requirements
+
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| OS | Windows 10 | Windows 10/11 | Linux
+| CPU | Intel i5 / AMD Ryzen 5 | Intel i7 / AMD Ryzen 7 |
+| RAM | 8 GB | 16 GB |
+| GPU | Dedicated GPU with 2GB VRAM | NVIDIA GTX 1060 or better |
+| Storage | 10 GB free space | 20 GB free space (SSD recommended) |
+
+---
+
+## Quick Start Guide
+
+Follow these steps to get the simulation running:
+
+### Step 1: Install SUMO
+
+1. Download SUMO 1.5 from the [official website](https://sumo.dlr.de/docs/Downloads.php)
+2. Run the installer and select **Add SUMO to system PATH**
+3. Restart your PC after installation
+
+Verify installation by opening Command Prompt:
+```bash
+sumo --version
+```
+
+### Step 2: Install Unity
+
+1. Download and install [Unity Hub](https://unity.com/download)
+2. Open Unity Hub → **Installs** → **Install Editor** → **Archive**
+3. Select version **2019.4.0f1** and install
+
+### Step 3: Clone the Repository
+
+```bash
+git clone https://github.com/thi-car2x-carissma/OpenROTUS3D-with-Ingolstadt-Region-master.git
+```
+
+### Step 4: Open in Unity
+
+1. Open Unity Hub
+2. Click **Projects** → **Add** → **Add project from disk**
+3. Select the cloned folder and open it
+4. Wait for Unity to import all assets (first time may take 10-15 minutes)
+
+### Step 5: Run the Simulation
+
+1. In Unity, press the **Play ▶️** button at the top center
+2. The Main Menu will appear - click **Load** to select a map
+3. Choose a region (e.g., `ingolstadt region`, `Eichstaett`, `Geisenfeld`)
+4. Use keyboard/mouse or steering wheel to control the vehicle
+
+---
+
+## Screenshots
+
+### Map Selection Menu
+Select from multiple pre-configured regions including Ingolstadt, Eichstätt, Frankfurt Center, and more.
+
+![Map Selection](screenshots/map_selection.png)
+
+### Driving Simulation View
+First-person cockpit view with real-time HUD displaying speed (km/h), steering angle, gear, and brake status.
+
+![Simulation View](screenshots/simulation_view.png)
+
+---
+
+## Available Maps
+
+| Map Name | Description |
+|----------|-------------|
+| AmpelDemo | Traffic light demonstration scenario |
+| AmpelDemo2 | Extended traffic light scenario |
+| Eichstaett | Eichstätt city region |
+| Frankfurtcenter | Frankfurt city center area |
+| FussgaengerRadfahrerDemo2 | Pedestrian and cyclist interaction demo |
+| Geisenfeld | Geisenfeld town simulation |
+| ingolstadt region | Greater Ingolstadt area simulation |
+
+---
+
 
 
 
