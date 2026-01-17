@@ -1,0 +1,13 @@
+<configuration>
+  <input>
+    <net-file value="freising.net.xml"/>
+    <route-files value="freising.rou.xml"/>
+    <additional-files value="freising.poly.xml"/>
+  </input>
+
+  <time>
+    <begin value="0"/>
+    <end value="3600"/>
+    <step-length value="0.1"/>
+  </time>
+</configuration>

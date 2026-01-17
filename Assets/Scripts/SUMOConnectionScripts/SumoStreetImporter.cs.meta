@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: dd813aab0bbd10240ad3cb78be50c43e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - roadMaterial: {instanceID: 0}
+  - roadMaterialSingleLane: {instanceID: 0}
+  - roadMaterialTrippleLane: {instanceID: 0}
+  - roadMaterialQuadLane: {instanceID: 0}
+  - junctionMaterial: {instanceID: 0}
+  - markerMaterial: {instanceID: 0}
+  - sidewalkMaterial: {instanceID: 0}
+  - roadPhysicMaterial: {instanceID: 0}
+  - offRoadPhysicsMaterial: {instanceID: 0}
+  - parent: {instanceID: 0}
+  - streetSignPrefab: {fileID: 1270353409894252, guid: 62c46d56c18dd7c41a62c142469363c8,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

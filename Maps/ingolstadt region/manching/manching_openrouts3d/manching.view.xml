@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewsettings>
+    <scheme name="OpenROUTS3D">
+        <background backgroundColor="0.70,0.80,0.70"/>
+    </scheme>
+    <delay value="100"/>
+    <viewport zoom="100" x="0" y="0"/>
+    <decals>
+    </decals>
+</viewsettings>

@@ -1,0 +1,13 @@
+<configuration>
+  <input>
+    <net-file value="reichertshausen.net.xml"/>
+    <route-files value="reichertshausen.rou.xml"/>
+    <additional-files value="reichertshausen.poly.xml"/>
+  </input>
+
+  <time>
+    <begin value="0"/>
+    <end value="3600"/>
+    <step-length value="0.1"/>
+  </time>
+</configuration>

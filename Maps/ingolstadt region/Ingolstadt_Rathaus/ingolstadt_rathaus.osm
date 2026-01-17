@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<osm version="0.6" generator="OpenROUTS3D" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="48.736903" minlon="11.274814" maxlat="48.783174" maxlon="11.600781"/>
+</osm>

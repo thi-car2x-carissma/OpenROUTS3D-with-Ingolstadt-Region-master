@@ -1,0 +1,21 @@
+<configuration>
+    <input>
+        <net-file value="gaimersheim.net.xml"/>
+        <route-files value="gaimersheim.rou.xml"/>
+        <additional-files value="gaimersheim.poly.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="36000"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <processing>
+        <time-to-teleport value="300"/>
+    </processing>
+
+    <gui_only>
+        <start value="true"/>
+    </gui_only>
+</configuration>

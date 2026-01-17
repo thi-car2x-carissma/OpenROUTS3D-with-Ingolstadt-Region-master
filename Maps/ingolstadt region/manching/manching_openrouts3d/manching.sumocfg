@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <input>
+  <net-file value="manching_new.net.xml"/>
+  <route-files value="manching_new.rou.xml"/>
+  <additional-files value="manching_new.poly.xml"/>
+</input>
+
+    <time>
+        <begin value="0"/>
+        <end value="36000"/>
+        <step-length value="0.1"/>
+    </time>
+
+    <traci_server>
+        <remote-port value="4001"/>
+    </traci_server>
+
+    <processing>
+        <collision.action value="warn"/>
+        <time-to-teleport value="300"/>
+    </processing>
+
+    <gui_only>
+        <start value="true"/>
+    </gui_only>
+</configuration>
