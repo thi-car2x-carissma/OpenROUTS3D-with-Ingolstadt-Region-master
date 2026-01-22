@@ -1,11 +1,12 @@
 ### General Information
 
-**OpenROUTS3D** (**Open** **R**ealtime **O**SM- and **U**nity-based **T**raffic **S**imulator **3D**) - A multi-purpose driving simulator developed for the needs of Teleoperated Driving.
+**OpenROUTS3D** (**Open** **R**ealtime **O**SM- and **U**nity-based **T**raffic **S**imulator **3D**) - A multi-purpose driving simulator developed for the needs of Teleoperated Driving. The software in this repository is an extension of the [original version](https://github.com/sneumeier/OpenROUTS3D) developed by Dr. Stefan Neumeier.
 
 ![OpenROUTS3D logo](logo.png)
 
 ### Features
-A rough overview of OpenROUTS3D and its features can be found at [IEEEXplore](https://ieeexplore.ieee.org/document/8965037)
+An overview of OpenROUTS3D and its features can be found in 
+S. Neumeier, M. Höpp and C. Facchi, "Yet Another Driving Simulator OpenROUTS3D: The Driving Simulator for Teleoperated Driving," IEEE International Conference on Connected Vehicles and Expo (ICCVE), 2019, doi: [10.1109/ICCVE45908.2019.8965037](https://ieeexplore.ieee.org/document/8965037). Key features are
 
 - Map and Artificial Traffic Creation
 - Input and Output management for Teloperated Driving
