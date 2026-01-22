@@ -167,7 +167,7 @@ OpenROUTS3D should run without it, but will not display any remote vehicles.
 See Wiki for Tutorials on How-To use the Simulator (TBD).
 
 ### Authors
-The original software for OpenROUTS3D Development and Maintenance was developed Stefan Neumeier and others in [Car2X-Team](https://www.thi.de/en/research/carissma/laboratories/car2x-laboratory) at Technische Hochschule Ingolstadt. The present repository is a result of Ishan Bharadava's masterthesis "Enhancement of a remote driving test framework based on OpenROUTS3D", supervised by  
+The original software for OpenROUTS3D Development and Maintenance was developed Stefan Neumeier and others in [Car2X-Team](https://www.thi.de/en/research/carissma/laboratories/car2x-laboratory) at Technische Hochschule Ingolstadt. The present repository is a result of Ishan Bharadava's masterthesis "Enhancement of a remote driving test framework based on OpenROUTS3D" in 2025/26, supervised by  
 [Prof. Dr. Andreas Festag](Andreas.Festag@thi.de) and [Silas Lobo](SilasCorreia.Lobo@carissma.eu).
 
 
