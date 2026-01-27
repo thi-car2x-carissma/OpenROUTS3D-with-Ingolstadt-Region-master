@@ -290,6 +290,7 @@ The original software for OpenROUTS3D was developed by **Stefan Neumeier** and o
 This repository is a result of **Ishan Bharadava's** master thesis *"Enhancement of a remote driving test framework based on OpenROUTS3D"* (2025/26), supervised by:
 
 - [Prof. Dr. Andreas Festag](mailto:Andreas.Festag@thi.de)
+- [Prof. Dr. Christian Facchi](mailto:Christian.Facchi@thi.de)
 - [Silas Lobo](mailto:SilasCorreia.Lobo@carissma.eu)
 
 ---
