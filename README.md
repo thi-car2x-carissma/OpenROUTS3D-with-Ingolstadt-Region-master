@@ -39,20 +39,20 @@ If you want to use the features of ([SUMO](https://www.dlr.de/ts/en/desktopdefau
 Find the axis in unity which is being affected by the steering wheel and the pedals, and bind your wheel and pedals to that axis via the "listen" command. It is most important to find which axis in Unity gives positive, negative and zero for steering wheel; only than choose that axis and in Unity properties of that input actions will be "Action type = Value" and "control type = Axis"
 
 ## For Linux
-(1) Install Flatpack 
-sudo apt update
-sudo apt install flatpak
-(2)Install Flathub
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-(3) Log out and Log in again in PC 
-(4) Install Oversteer
+(1) Install Flatpack <br>
+sudo apt update <br>
+sudo apt install flatpak <br>
+(2)Install Flathub <br>
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo <br>
+(3) Log out and Log in again in PC  <br>
+(4) Install Oversteer <br>
 flatpak install flathub io.github.berarma.Oversteer
 
 ## For Windows
-(1) Download LGHUB app and make an account in it 
-(2) Keep LGHUB app running and download its drivers
-(3) Find your steering wheel and its name in LGHUB app 
-(4) Always keep LGHUB app running in background.
+(1) Download LGHUB app and make an account in it  <br>
+(2) Keep LGHUB app running and download its drivers <br>
+(3) Find your steering wheel and its name in LGHUB app  <br>
+(4) Always keep LGHUB app running in background. <br>
 
 
 #### Input-Configuration
