@@ -5,21 +5,11 @@
 [![Unity](https://img.shields.io/badge/Unity-2019.4.0f1-black.svg)](https://unity.com/)
 [![SUMO](https://img.shields.io/badge/SUMO-1.5-green.svg)](https://sumo.dlr.de/)
 
-<!-- Button Images - Add your button images here -->
-<!--
-[![website](Docs/img/btn/web.png)](https://www.thi.de/en/research/carissma/)
-[![download](Docs/img/btn/download.png)](https://github.com/thi-car2x-carissma/OpenROTUS3D-with-Ingolstadt-Region-master/releases)
-[![documentation](Docs/img/btn/docs.png)](https://github.com/thi-car2x-carissma/OpenROTUS3D-with-Ingolstadt-Region-master/wiki)
-[![forum](Docs/img/btn/forum.png)](https://github.com/thi-car2x-carissma/OpenROTUS3D-with-Ingolstadt-Region-master/discussions)
--->
+<p align="center">
+  <img src="Docs/img/logo.png" alt="OpenROUTS3D Logo" width="200">
+</p>
 
 **OpenROUTS3D** (**Open** **R**ealtime **O**SM- and **U**nity-based **T**raffic **S**imulator **3D**) is a multi-purpose driving simulator developed for the needs of Teleoperated Driving. This repository is an extension of the [original version](https://github.com/sneumeier/OpenROUTS3D) developed by Dr. Stefan Neumeier, featuring regional traffic simulation coverage for the Ingolstadt-Munich area.
-
-<!-- Add your logo image here -->
-<!-- ![OpenROUTS3D Logo](Docs/img/logo.png) -->
-
-<!-- Add your main preview image/video here -->
-<!-- [![OpenROUTS3D Preview](Docs/img/preview.png)](https://www.youtube.com/watch?v=your-video-id) -->
 
 > [!NOTE]
 > This extension includes simulation scenes for multiple villages and districts in the Ingolstadt region, integration of SUMO traffic data with OpenStreetMap geographic data, and various bug fixes for robust SUMO-Unity integration.
@@ -50,6 +40,31 @@ An overview of OpenROUTS3D and its features can be found in:
 - ✅ Bug fixes for PhysX mesh collider creation with short road segments
 - ✅ Enhanced error handling in `SumoStreetImporter.cs` for robust SUMO-Unity integration
 - ✅ Error fixes while generating `.net.xml` due to collision of street coordinates
+
+---
+
+## Screenshots
+
+### Unity Driving Simulation
+<p align="center">
+  <img src="Docs/img/screenshots/unity_simulation.png" alt="Unity Driving Simulation" width="800">
+</p>
+
+*First-person cockpit view in Unity showing the driving simulation environment*
+
+### SUMO Traffic Network - Ingolstadt Region
+<p align="center">
+  <img src="Docs/img/screenshots/sumo_ingolstadt.jpg" alt="SUMO Ingolstadt Network" width="800">
+</p>
+
+*SUMO 1.5.0 showing the Ingolstadt Rathaus road network loaded from `ingolstadt_rathaus.sumocfg`*
+
+### Overpass Turbo - OSM Data Extraction
+<p align="center">
+  <img src="Docs/img/screenshots/overpass_turbo.jpg" alt="Overpass Turbo Query" width="800">
+</p>
+
+*Overpass Turbo query extracting road network and building data from OpenStreetMap*
 
 ---
 
@@ -120,6 +135,50 @@ git clone https://github.com/thi-car2x-carissma/OpenROTUS3D-with-Ingolstadt-Regi
 
 ---
 
+## Creating Custom Maps with Overpass Turbo
+
+You can create custom map regions using OpenStreetMap data via Overpass Turbo:
+
+### Step 1: Open Overpass Turbo
+
+Go to [https://overpass-turbo.eu](https://overpass-turbo.eu)
+
+### Step 2: Write Query
+
+Use a query like this to extract roads and buildings for your desired area:
+
+```
+[out:xml][timeout:120];
+
+// Define bounding box (south, west, north, east)
+(
+  // Car roads only
+  way["highway"~"^(motorway|motorway_link|trunk|trunk_link|primary|primary_link|secondary|secondary_link|tertiary|tertiary_link|unclassified|residential|living_street|service)$"]({{bbox}});
+  
+  // Buildings in the same area
+  way["building"]({{bbox}});
+);
+
+// Include all referenced nodes
+(._;>;);
+out body;
+```
+
+### Step 3: Export Data
+
+1. Navigate to your desired region on the map
+2. Click **Run** to execute the query
+3. Click **Export** → **download as raw OSM data**
+4. Save the `.osm` file
+
+### Step 4: Convert to SUMO Network
+
+```bash
+netconvert --osm-files your_map.osm -o your_map.net.xml
+```
+
+---
+
 ## Available Maps
 
 | Map Name | Description |
@@ -131,19 +190,6 @@ git clone https://github.com/thi-car2x-carissma/OpenROTUS3D-with-Ingolstadt-Regi
 | `FussgaengerRadfahrerDemo2` | Pedestrian and cyclist interaction demo |
 | `Geisenfeld` | Geisenfeld town simulation |
 | `ingolstadt region` | Greater Ingolstadt area simulation |
-
----
-
-## Screenshots
-
-<!-- Add your screenshots here -->
-<!--
-### Map Selection Menu
-![Map Selection](Docs/img/screenshots/map_selection.png)
-
-### Driving Simulation View
-![Driving View](Docs/img/screenshots/driving_view.png)
--->
 
 ---
 
