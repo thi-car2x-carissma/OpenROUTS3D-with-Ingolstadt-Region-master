@@ -25,7 +25,7 @@ This extension compared to the original OpenROUTS3D framework include:
 - Enhanced error handling in SumoStreetImporter.cs for robust SUMO-Unity integration
 - Error fixes while generating .net.xml due to collidation of street co-ordinates.
 
-### Installation + Execution
+### Installation + Execution of Repository 
 Clone the repository and put it in your device's disk 
 import it into the Unity Hub (choose Option- Add -> Add Project from Disk).
 When errors occur, please clear the console and check if the package manager is included (Window -> Package Mangager).
@@ -35,8 +35,25 @@ Start the Unity-Editor again.
 Instruction for SUMO:
 If you want to use the features of ([SUMO](https://www.dlr.de/ts/en/desktopdefault.aspx/tabid-9883/16931_read-41000/)), install SUMO Version 1.5. After the installation, you may need to **restart** your PC.
 
-Instruction for steering wheel and pedals:
-Find the axis in unity which is being affected by the steering wheel and the pedals, and bind your wheel and pedals to that axis via the "listen" command. It is most important to find which axis in Unity gives positive, negative and zero; only than choose that axis and in Unity properties of that input actions will be "Action type = Value" and "control type = Axis"
+#### Configuration of steering wheel and pedals
+Find the axis in unity which is being affected by the steering wheel and the pedals, and bind your wheel and pedals to that axis via the "listen" command. It is most important to find which axis in Unity gives positive, negative and zero for steering wheel; only than choose that axis and in Unity properties of that input actions will be "Action type = Value" and "control type = Axis"
+
+## For Linux
+(1) Install Flatpack 
+sudo apt update
+sudo apt install flatpak
+(2)Install Flathub
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+(3) Log out and Log in again in PC 
+(4) Install Oversteer
+flatpak install flathub io.github.berarma.Oversteer
+
+## For Windows
+(1) Download LGHUB app and make an account in it 
+(2) Keep LGHUB app running and download its drivers
+(3) Find your steering wheel and its name in LGHUB app 
+(4) Always keep LGHUB app running in background.
+
 
 #### Input-Configuration
 
