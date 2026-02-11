@@ -10,7 +10,7 @@
 **OpenROUTS3D** (**Open** **R**ealtime **O**SM- and **U**nity-based **T**raffic **S**imulator **3D**) is a multi-purpose driving simulator developed for the needs of Teleoperated Driving. This repository is an extension of the [original version](https://github.com/sneumeier/OpenROUTS3D) developed by Dr. Stefan Neumeier, featuring regional traffic simulation coverage for the Ingolstadt-Munich area.
 
 <p align="center">
-  <img src="Docs/img/screenshots/logo.png" alt="logo.png" width="600">
+  <img src="Docs/img/screenshots/logo.png" alt="logo.png" width="400">
 </p>
 
 > [!NOTE]
@@ -49,21 +49,21 @@ An overview of OpenROUTS3D and its features can be found in:
 
 ### Unity Driving Simulation
 <p align="center">
-  <img src="Docs/img/screenshots/unity_simulation.png" alt="Unity Driving Simulation" width="800">
+  <img src="Docs/img/screenshots/unity_simulation.png" alt="Unity Driving Simulation" width="500">
 </p>
 
 *First-person cockpit view in Unity showing the driving simulation environment*
 
 ### SUMO Traffic Network - Ingolstadt Region
 <p align="center">
-  <img src="Docs/img/screenshots/sumo_ingolstadt.jpg" alt="SUMO Ingolstadt Network" width="800">
+  <img src="Docs/img/screenshots/sumo_ingolstadt.jpg" alt="SUMO Ingolstadt Network" width="500">
 </p>
 
 *SUMO 1.5.0 showing the Ingolstadt Rathaus road network loaded from `ingolstadt_rathaus.sumocfg`*
 
 ### Overpass Turbo - OSM Data Extraction
 <p align="center">
-  <img src="Docs/img/screenshots/overpass_turbo.jpg" alt="Overpass Turbo Query" width="800">
+  <img src="Docs/img/screenshots/overpass_turbo.jpg" alt="Overpass Turbo Query" width="500">
 </p>
 
 *Overpass Turbo query extracting road network and building data from OpenStreetMap*
