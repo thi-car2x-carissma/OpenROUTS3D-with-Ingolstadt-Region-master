@@ -266,6 +266,23 @@ SUMOConnectionScripts.SumoUnityConnection.FixedUpdate () (at Assets/Scripts/SUMO
 **Fix:** SUMO is not installed or configured properly. OpenROUTS3D will run without it, but will not display any remote vehicles.
 
 </details>
+<details>
+<summary><b>🐧 Linux: 3 displays do not work simultaneously</b></summary>
+
+**Bug:** When running OpenROUTS3D on Linux with a multi-monitor setup, 3 displays do not render simultaneously. Only one or two displays show the simulation output.
+
+**Fix:**
+
+1. Open your Linux **Display Settings** and set all 3 monitors to **Join Displays** mode (so they act as one extended desktop).
+2. In the **Unity Editor**, locate the **Game** tab (next to the Hierarchy panel).
+3. **Right-click** on the Game tab → select **Add Tab** → choose **Game**.
+4. Repeat step 3 to create a third Game tab (so you have 3 Game tabs total).
+5. In each Game tab, assign a different **Target Display** (`Display 1`, `Display 2`, `Display 3`).
+
+> [!TIP]
+> Make sure your cameras in the scene are also assigned to the correct Target Display in the Inspector panel.
+
+</details>
 
 ---
 
