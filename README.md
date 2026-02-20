@@ -283,6 +283,23 @@ SUMOConnectionScripts.SumoUnityConnection.FixedUpdate () (at Assets/Scripts/SUMO
 > Make sure your cameras in the scene are also assigned to the correct Target Display in the Inspector panel.
 
 </details>
+<details>
+<summary><b>🎮 Steering wheel deadzone not responding correctly</b></summary>
+
+**Bug:** The steering wheel (e.g., Logitech G29) has an unresponsive deadzone, causing delayed or no input registration for small steering movements.
+
+**Fix:**
+
+1. In Unity, go to **Edit** → **Project Settings** → **Input System Package**.
+2. Find the **Default Deadzone Min** and **Default Deadzone Max** values.
+3. Set **Default Deadzone Min** to `0` and **Default Deadzone Max** to `1`.
+4. Under **Supported Devices**, make sure the list is **empty** so that the Input System recognizes all connected devices.
+
+> [!NOTE]
+> After changing these values, restart the Play mode for the settings to take effect.
+
+</details>
+
 
 ---
 
