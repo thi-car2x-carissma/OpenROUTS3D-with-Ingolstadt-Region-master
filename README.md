@@ -118,8 +118,7 @@ sumo --version
 
 ### Step 3: Install Steering Wheel Software
 
-<details>
-<summary><b>🐧 Linux Setup (Logitech G29)</b></summary>
+#### 🐧 Linux Setup (Logitech G29)
 ```bash
 # Install Flatpak
 sudo apt update
@@ -134,10 +133,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 flatpak install flathub io.github.berarma.Oversteer
 ```
 
-</details>
-
-<details>
-<summary><b>🪟 Windows Setup (Logitech G29)</b></summary>
+#### 🪟 Windows Setup (Logitech G29)
 
 1. Download LGHUB app and create an account
 2. Keep LGHUB app running and download its drivers
@@ -145,7 +141,6 @@ flatpak install flathub io.github.berarma.Oversteer
 4. Always keep LGHUB app running in background
 5. **Use PS3 mode** for Logitech G29
 
-</details>
 
 ### Step 4: Clone the Repository
 ```bash
