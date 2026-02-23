@@ -69,31 +69,35 @@ An overview of OpenROUTS3D and its features can be found in:
 *Overpass Turbo query extracting road network and building data from OpenStreetMap*
 
 ---
+## Recommended Hardware
 
-## Recommended System
+| Component | Minimum | Recommended | Tested with |
+|-----------|---------|-------------|-------------|
+| **OS** | Windows 10 / Linux | Windows 10/11 / Linux | Ubuntu 22.04 LTS (Kernel 6.8.0-51-generic) |
+| **CPU** | Intel i5 / AMD Ryzen 5 | Intel i7 / AMD Ryzen 7 | <!-- TODO: Add your CPU --> |
+| **RAM** | 8 GB | 16 GB | <!-- TODO: Add your RAM --> |
+| **GPU** | Dedicated GPU with 2 GB VRAM | NVIDIA GTX 1060 or better with ≥ 3 HDMI/DisplayPort outputs | <!-- TODO: Add your GPU model --> |
+| **Storage** | 10 GB free space | 20 GB free space (SSD recommended) | <!-- TODO: Add your storage --> |
+| **Steering Wheel** | Any USB steering wheel | Logitech G29 Driving Force | Logitech G29 |
+| **Pedals** | Any USB pedal set | Logitech G29 Pedals | Logitech G29 Pedals |
 
-| Component | Minimum | Recommended |
-|-----------|---------|-------------|
-| **OS** | Windows 10 / Linux | Windows 10/11 / Linux |
-| **CPU** | Intel i5 / AMD Ryzen 5 | Intel i7 / AMD Ryzen 7 |
-| **RAM** | 8 GB | 16 GB |
-| **GPU** | Dedicated GPU with 2GB VRAM | NVIDIA GTX 1060 or better |
-| **Storage** | 10 GB free space | 20 GB free space (SSD recommended) |
+> [!TIP]
+> For multi-display setups (e.g., 3 screens for immersive driving), your GPU must have at least 3 HDMI/DisplayPort outputs, or use a compatible adapter/splitter.
 
----
 
-## Prerequisites
+## Required Software
 
-| Software | Version | Download Link |
-|----------|---------|---------------|
-| Unity Hub | Latest | [Download Unity Hub](https://unity.com/download) |
-| Unity Editor | 2019.4.0f1 (LTS) | Install via Unity Hub |
-| SUMO | 1.5 | [Download SUMO 1.5](https://sumo.dlr.de/docs/Downloads.php) |
-| Git | Latest | [Download Git](https://git-scm.com/downloads) |
+| Software | Version | Download Link | Tested with |
+|----------|---------|---------------|-------------|
+| Unity Hub | Latest | [Download Unity Hub](https://unity.com/download) | Unity Hub 3.x |
+| Unity Editor | **2019.4.0f1 (LTS)** | Install via Unity Hub → Archive | **2019.4.0f1** |
+| SUMO | 1.5 | [Download SUMO 1.5](https://sumo.dlr.de/docs/Downloads.php) | **1.5.0** |
+| Git | Latest | [Download Git](https://git-scm.com/downloads) | 2.x |
 
----
+> [!WARNING]
+> **Newer Unity versions are NOT supported** due to physics engine changes and API breaking changes. The project relies on Unity 2019.4 LTS physics behavior and APIs. Using newer versions will cause compilation errors and incorrect simulation behavior.
 
-## Quick Start Guide
+## Installation Guide
 
 ### Step 1: Install SUMO
 
@@ -112,31 +116,83 @@ sumo --version
 2. Open Unity Hub → **Installs** → **Install Editor** → **Archive**
 3. Select version **2019.4.0f1** and install
 
-### Step 3: Clone the Repository
+### Step 3: Install Steering Wheel Software
 
+<details>
+<summary><b>🐧 Linux Setup (Logitech G29)</b></summary>
 ```bash
-git clone https://github.com/thi-car2x-carissma/OpenROTUS3D-with-Ingolstadt-Region-master.git
+# Install Flatpak
+sudo apt update
+sudo apt install flatpak
+
+# Install Flathub
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Log out and log in again
+
+# Install Oversteer
+flatpak install flathub io.github.berarma.Oversteer
 ```
 
-### Step 4: Open in Unity
+</details>
 
-1. Open Unity Hub
+<details>
+<summary><b>🪟 Windows Setup (Logitech G29)</b></summary>
+
+1. Download LGHUB app and create an account
+2. Keep LGHUB app running and download its drivers
+3. Find your steering wheel in LGHUB app
+4. Always keep LGHUB app running in background
+5. **Use PS3 mode** for Logitech G29
+
+</details>
+
+### Step 4: Clone the Repository
+```bash
+git clone https://github.com/thi-car2x-carissma/OpenROUTS3D-with-Ingolstadt-Region-master.git
+```
+
+### Step 5: Open Project in Unity
+
+1. Open **Unity Hub**
 2. Click **Projects** → **Add** → **Add project from disk**
-3. Select the cloned folder and open it
-4. Wait for Unity to import all assets (first time may take 10-15 minutes)
+3. Navigate to the cloned folder and select it
+4. Wait for Unity to import all assets (first time may take 10–15 minutes)
+
+> [!NOTE]
+> If you see errors in the Unity Console after opening, clear the console and check the Package Manager (`Window` → `Package Manager`). If it doesn't load properly, close Unity, delete `Packages/manifest.json` in your project directory, and reopen Unity.
+
+## Quick Start Guide
+
+### Configuration
+
+#### Single Screen Setup
+
+No additional configuration is required. The simulation will render on your primary display by default.
+
+#### Multiple Screen Setup
+
+To configure a multi-display setup (e.g., 3 screens for an immersive driving experience):
+
+1. **OS Display Settings:** Open your display settings and set all monitors to **Join Displays** / **Extend** mode (so they act as one extended desktop).
+2. **Unity Game Tabs:**
+   - In the Unity Editor, locate the **Game** tab (next to the Hierarchy panel).
+   - **Right-click** on the Game tab → select **Add Tab** → choose **Game**.
+   - Repeat to create a total of 3 Game tabs.
+3. **Assign Displays:** In each Game tab, set a different **Target Display** (`Display 1`, `Display 2`, `Display 3`).
+4. **Camera Assignment:** Ensure the cameras in the scene are assigned to the correct **Target Display** in the Inspector panel.
 
 > [!TIP]
-> If errors occur, clear the console and check if the package manager is included (Window → Package Manager). If not, close the Unity Editor and delete the file `manifest.json` in the `packages` directory, then restart Unity.
+> Make sure your GPU has enough HDMI/DisplayPort outputs for all screens. See the [Recommended Hardware](#recommended-hardware) section.
 
-### Step 5: Run the Simulation
+### Run the Simulation
 
 1. In Unity, press the **Play ▶️** button at the top center
-2. The Main Menu will appear - click **Load** to select a map
+2. The Main Menu will appear – click **Load** to select a map
 3. Choose a region (e.g., `ingolstadt region`, `Eichstaett`, `Geisenfeld`)
 4. Use keyboard/mouse or steering wheel to control the vehicle
 
----
-
+<!-- TODO: Step to be expanded after Tuesday review -->
 ## Creating Custom Maps with Overpass Turbo
 
 You can create custom map regions using OpenStreetMap data via Overpass Turbo:
