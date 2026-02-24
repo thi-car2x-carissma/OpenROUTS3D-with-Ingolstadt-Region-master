@@ -74,7 +74,7 @@ An overview of OpenROUTS3D and its features can be found in:
 | Component | Minimum | Recommended | Tested with |
 |-----------|---------|-------------|-------------|
 | **OS** | Windows 10 / Linux | Windows 10/11 / Linux | Ubuntu 24.04.3 LTS  |
-| **CPU** | Intel i5 / AMD Ryzen 5 | Intel i7 / AMD Ryzen 7 | <Intel i7> |
+| **CPU** | Intel i5 / AMD Ryzen 5 | Intel i7 / AMD Ryzen 7 | <Intel i7 > |
 | **RAM** | 8 GB | 16 GB | <16 GB> |
 | **GPU** | Dedicated GPU with 2 GB VRAM | NVIDIA GTX 1060 or better with ≥ 3 HDMI/DisplayPort outputs | <NVIDIA GTX 1070 Ti> |
 | **Storage** | 10 GB free space | 20 GB free space (SSD recommended) | <1.3 TB> |
